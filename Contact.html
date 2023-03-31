@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <title>
+     Contact
+    </title> 
+    <script src="Javascript/script.js"></script>
+    <link rel="stylesheet" href= "CSS/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div id="picture-css">
+    </div>
+    
+    <nav class="menu">
+    
+        <a href="Page1.html">Products</a> &nbsp;&nbsp;&nbsp;
+        <a href="Page 2.html">About Us</a> &nbsp;&nbsp;&nbsp;
+        <a href="Widget.html">Widget</a> &nbsp;&nbsp;&nbsp;
+        <a href="Contact.html">Contact</a> &nbsp;&nbsp;&nbsp;
+        <a href="Loginpage.html">Logout</a> &nbsp;&nbsp;&nbsp;
+        
+    </nav>
+    <div id="form">
+        <form id="form1" method="post" action="Page2.HTML" >
+        
+         <p>
+         <label for ="FirstName">Firstname:</label>
+      <input type="text" name="firstname">
+    </p>
+    <p>
+      <label for ="LastName">Lastname:</label>
+      <input type="text" name="lastname">
+    </p>
+    <p>
+        <label for ="Name">FullName:</label>
+        <input type="text" name="name" required>
+        </p>
+       <p>
+         <label for ="Email">Email:</label>
+         <input type="email" name="email" required>
+         </p>
+      
+       <p>
+           <label for = "Gender"> Gender:</label>
+       <select>
+           <option value="">--select--</option>
+          <option id="m" value="Male">Male</option>
+             <option id="f" value="Female">Female</option>
+             <option id="o" value="Other">Other</option>
+             <option value="NA">Skip</option>
+       </select>
+       </p>
+    
+       <p>
+        <label for = "Role"> Role:</label>
+    <select id="Role" name = "Role">
+        <option value=""class="Role">--select--</option>
+       <option id="Dev" value="Developer"class="Role">Developer</option>
+          <option id="Man" value="Manager"class="Role">Manager</option>
+    </select>
+    </p>
+
+    <label for = "Issueabout"> Issue About:</label>
+    <select id="Issues" name="Issues">
+        <option value=""class="Issue">--select--</option>
+
+    </select>
+    </p>
+         <p>
+         <label for ="Subject">Subject:</label>
+         <input type="text" name="subject" required>
+         </p>
+         <p>
+         <label for ="Message">Message:</label>     
+        <textarea name="Message" id="message" cols="30" rows="10" required>
+         
+        </textarea>
+        </p>
+         <p>
+          <input type="submit" id="submit" name="Submit" value="Send Message">
+         </p>
+    
+    </form>
+  <footer>
+    &copy; Demo for PX Web app &nbsp; &nbsp; &nbsp; &nbsp; created by Manoj Eskala
+</footer>
+</div>
+
+<script>
+    $("select#Role").on('change',function(){
+    var selected = $('#Role option:selected').text();
+    if(selected=="Developer")
+    {
+        var data = [
+          { "name": "Sandbox Environment", "issue": "Sandbox Environment" },
+          { "name": "Production Environment", "issue": "Production Environment" },
+          { "name": "Demo Environment", "issue": "Demo Environment" },
+        
+       ];
+       $('#Issues').empty();
+       for (var index = 0; index <= data.length; index++) {
+          $('#Issues').append('<option value="' + data[index].name + '">' +  data[index].issue +'</option>');
+       }
+    } 
+    else if(selected=="Manager"){
+        var data = [
+        { "name": "Approval Access", "issue": "Approval Access" },
+          { "name": "Production Environment", "issue": "Production Environment" },
+          { "name": "Sandbox Environment", "issue": "Sandbox Environment" },  
+       ];
+       $('#Issues').empty();
+       for (var index = 0; index <= data.length; index++) {
+          $('#Issues').append('<option value="' + data[index].name + '">' +  data[index].issue +'</option>');
+       } 
+    }
+    else
+    {
+        var data = [
+        { "name": "Select", "issue": "--select--" } 
+       ]; 
+       $('#Issues').empty();
+       for (var index = 0; index <= data.length; index++) {
+          $('#Issues').append('<option value="' + data[index].name + '">' +  data[index].issue +'</option>');
+       } 
+    }
+});
+  
+    </script>
+</body>
+</html>

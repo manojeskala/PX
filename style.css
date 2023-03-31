@@ -1,0 +1,104 @@
+
+
+#picture-css
+{
+    width:350px;
+    height:250px;
+background-image: url("Images/PXDemo.jpg");
+margin:0auto;
+}
+body{
+    background: #F4f4f4;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.container
+{
+  width: 580px;
+  margin:0 auto;
+  background: rgb(211, 216, 220);  
+}
+.headerlogin{
+    font-size: 24px;
+}
+
+
+
+.header{
+    padding: 25px 0 20px 40px;
+    border: 2px solid black;
+    background: whitesmoke;
+}
+
+.menu{
+    background: darkblue;
+    padding: 5px 0 5px 40px;
+}
+
+.menu a{
+    color : #f6f7f8;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Montserrat';
+}
+
+.menu a:hover{
+    color: darkblue;
+}
+
+
+.Button_class1
+{
+background-color: rgba(206, 195, 220, 0.353);
+cursor: pointer;
+}
+
+.Button_class2
+{
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+
+
+footer{
+    background: white;
+    padding: 6px 40px 6px 40px;
+}
+
+
+
+#Loginbutton{
+    cursor: pointer;
+    box-align: center;
+    padding: 6px 6px 6px;
+}
+#Loginform input{
+border-radius: 10px;
+height: 40px;
+background: whitesmoke;
+}
+.dragred
+{
+    width: 150px;
+     height: 150px;
+      padding: 0.5em;
+      background-color: red;
+}
+
+.dragblue
+{
+    width: 150px;
+     height: 150px;
+      padding: 0.5em;
+      background-color: blue;
+}
+.draggreen
+{
+    width: 150px;
+     height: 150px;
+      padding: 0.5em;
+      background-color: green;
+}
+
